@@ -1,0 +1,42 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "Server side rendering with React",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:**",
+    "dev:build:server": "webpack --config webpack.server.js --watch --mode development",
+    "dev:build:client": "webpack --config webpack.client.js --watch --mode development",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "axios": "0.19.0",
+    "express": "4.17.1",
+    "express-http-proxy": "1.5.1",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-helmet": "5.2.1",
+    "react-redux": "7.1.1",
+    "react-router-config": "5.0.1",
+    "react-router-dom": "5.0.1",
+    "redux": "4.0.4",
+    "redux-thunk": "2.3.0",
+    "serialize-javascript": "1.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "8.0.6",
+    "npm-run-all": "^4.1.5",
+    "webpack": "4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "3.8.0",
+    "webpack-merge": "4.2.2",
+    "webpack-node-externals": "1.7.2"
+  }
+}
